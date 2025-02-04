@@ -76,6 +76,5 @@ async function main() {
 const PORT = 3000;
 
 app.listen(PORT, () => {
-    // console.log(`Server rodando na porta: ${PORT}`);
     main();
 });

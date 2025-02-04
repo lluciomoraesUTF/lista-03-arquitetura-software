@@ -1,11 +1,13 @@
 export default class Catalogo {
     constructor() {
+        //Define a lista de produtos disponiveis
         this.produtos = {
             "1": { name: "Laser de Gato", price: 10.0, stock: 5 },
             "2": { name: "Comida para Peixe", price: 20.0, stock: 10 },
         };
     }
 
+    //Recupera o produto
     getproduto(produtoId) {
         const produto = this.produtos[produtoId];
         if (produto) {
@@ -17,6 +19,7 @@ export default class Catalogo {
         }
     }
 
+    //Confere se o produto esta disponivel no estoque
     checkStock(produtoId, quantidade) {
         const produto = this.produtos[produtoId];
         if (produto && produto.stock >= quantidade) {
@@ -27,6 +30,7 @@ export default class Catalogo {
         }
     }
 
+    //Lista as opcoes de produtos disponiveis
     listprodutos() {
         console.log("Catálogo de Produtos:");
         for (const [id, produto] of Object.entries(this.produtos)) {
